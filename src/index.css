@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
+  width: 100%;
+  height: 100%;
+  background: rgb(22,32,50);
+  background: -moz-linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,1) 50%, rgba(66,100,123,1) 100%);
+  background: -webkit-linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,1) 50%, rgba(66,100,123,1) 100%);
+  background: linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,1) 50%, rgba(66,100,123,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162032",endColorstr="#42647b",GradientType=1);
+  background-attachment: fixed;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,3 +24,7 @@ code {
     monospace;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}

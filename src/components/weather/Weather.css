@@ -1,22 +1,49 @@
 .weather-data {
     text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.438)), url("../../assets/weather-bgs/a_few_clouds_weather.png");
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .css-pwngrv-MuiPaper-root-MuiCard-root {
-    background-color: #1a1d30 !important;
-    /* color: rgba(0, 0, 0, 0.87); */
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .app-bg-color {
-    background-color: #1a1d30;
+    background-color: transparent;
 }
 
 .card-bg {
-    background-color: #202536;
+    background-color: #2b3d4ed0;
     color: #44b9c0;
+    backdrop-filter: blur(5px);
+    border-width: 1px;
+    border-color: #2b3d4e;
+    padding: 16px 16px 16px 16px!important;
+
 }
 
 .main-weather-data {
     color: #d1b76c;
+
 }
 
+.cyber-yellow {
+    color: #d1b76c;
+}
+
+.main-weather-cards {
+    background: hsl(219, 39%, 14%);
+    background: -moz-linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,0.896796218487395) 50%, rgba(66,100,123,0.30015756302521013) 100%);
+    background: -webkit-linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,0.896796218487395) 50%, rgba(66,100,123,0.30015756302521013) 100%);
+    background: linear-gradient(29deg, rgba(22,32,50,1) 0%, rgba(34,42,65,0.896796218487395) 50%, rgba(66,100,123,0.30015756302521013) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162032",endColorstr="#42647b",GradientType=1);
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+}
+
+
+  
+  

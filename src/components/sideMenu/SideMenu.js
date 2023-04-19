@@ -3,6 +3,7 @@ import "./SideMenu.css";
 import axios from "axios";
 import { API_KEY } from "../../apiKey";
 import Button from "@mui/material/Button";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 const SideMenu = ({ isOpen, onClose, onSelectCity, onUnitChange }) => {
   const [cityList, setCityList] = useState([]);
@@ -70,44 +71,66 @@ const SideMenu = ({ isOpen, onClose, onSelectCity, onUnitChange }) => {
   return (
     <div className={`side-menu ${isOpen ? "open" : ""}`}>
       <nav>
-        <div className="py-2">
-          <Button variant="text" onClick={() => handleUnitChange("metric")}>
-            Celsius
-          </Button>
-          <Button variant="text" onClick={() => handleUnitChange("imperial")}>
-            Fahrenheit
-          </Button>
+        <div className="flex justify-end pt-5 pr-2 pb-4">
+          <div className="order-last">
+            <Button
+              variant="text"
+              onClick={() => handleUnitChange("metric")}
+              className="side-menu-temp-btn"
+            >
+              C
+            </Button>
+            <Button className="btn-separator-clr" disabled>
+              |
+            </Button>
+            <Button
+              variant="text"
+              onClick={() => handleUnitChange("imperial")}
+              className="side-menu-temp-btn"
+            >
+              F
+            </Button>
+          </div>
         </div>
-        <div>
+        <div className="text-center pb-2">
           <input
             type="text"
             value={searchTerm}
             onChange={handleInputChange}
-            placeholder="Search for a city"
+            placeholder="Search"
+            className="p-2 text-center search-bar"
           />
-        </div>
 
-        <div>
           {cityList.map((city) => (
             <ol>
-              <Button key={city.id} onClick={() => handleSelectCity(city)}>
+              <Button
+                key={city.id}
+                onClick={() => handleSelectCity(city)}
+                className="side-menu-btn "
+              >
                 {city.name}, {city.sys.country}
               </Button>
             </ol>
           ))}
         </div>
-        <div className="saved-cities side-menu-txt text-center">
-          <h1>Saved Cities</h1>
+
+        <div className="saved-cities side-menu-txt text-center pt-10">
+          <h1>Locations</h1>
           {savedCities.map((city) => (
-            <ol className="side-menu-txt">
+            <ol>
               <Button
                 key={city.id}
                 onClick={() => handleSelectCity(city)}
-                className="side-menu-txt"
+                className="side-menu-btn"
               >
                 {city.name}, {city.sys.country}
               </Button>
-              <Button onClick={() => handleRemoveCity(city)}>Remove</Button>
+              <Button
+                onClick={() => handleRemoveCity(city)}
+                className="side-menu-btn-x"
+              >
+                <CloseRoundedIcon />
+              </Button>
             </ol>
           ))}
         </div>

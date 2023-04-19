@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="hamburger-menu">
+        <div className="hamburger-menu pt-5">
           <button onClick={handleMenuClick}>☰</button>
         </div>
       </header>

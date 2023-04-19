@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 const Weather = ({ city, unit }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -35,7 +35,14 @@ const Weather = ({ city, unit }) => {
   }, [city, unit]);
 
   if (!weatherData) {
-    return <div className="weather-data">Loading...</div>;
+    return (
+      <div className="text-center cyber-yellow pt-20 pb-4 text-5xl font-bold">
+        Please <br /> search
+        <br />
+        for a<br /> location
+        <br />
+      </div>
+    );
   }
   const temperature = `${Math.round(weatherData.main.temp)}°${
     unit === "metric" ? "C" : "F"
@@ -52,81 +59,126 @@ const Weather = ({ city, unit }) => {
 
   return (
     <div className="weather-data app-bg-color">
-      <div className="main-weather-data">
-        <h1 className="text-2xl font-bold">{weatherData.name}</h1>
-        <h1 className="text-2xl font-bold">Temperature: {temperature}</h1>
-        <h2 className="text-2xl font-bold">Feels like: {feelsLike}</h2>
+      <div className="main-weather-data pt-20 pb-20">
+        <h1 className="text-2xl font-bold drop-shadow-lg capitalize">
+          {weatherData.name}
+        </h1>
+        <h1 className="text-7xl	font-bold drop-shadow-lg">{temperature}</h1>
+        <h1 className="text-2xl font-bold drop-shadow-lg capitalize">
+          {weatherData.weather[0].description}
+        </h1>
       </div>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Pressure</p>
-          <p>
-            <FontAwesomeIcon
-              icon="fa-solid fa-chevron-right"
-              style={{ color: "#105ada" }}
-            />
-            {weatherData.main.pressure} hPa
-          </p>
-        </CardContent>
-      </Card>
+      <div className="main-weather-cards">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Feels like</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {feelsLike}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Max Temperature > {maxTemperature}</p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Max Temperature</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {maxTemperature}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Min Temperature: {minTemperature}</p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Min Temperature</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {minTemperature}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Humidity: {weatherData.main.humidity}%</p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Pressure</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {weatherData.main.pressure} hPa
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Description: {weatherData.weather[0].description}</p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Humidity</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {weatherData.main.humidity}%
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>Wind degrees: {weatherData.wind.deg}°</p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Wind degrees</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {weatherData.wind.deg}°
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>
-            Wind speed: {weatherData.wind.speed}{" "}
-            {unit === "metric" ? "m/s" : "mph"}
-          </p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Wind speed</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {weatherData.wind.speed}
+                {unit === "metric" ? "m/s" : "mph"}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>
-            Sunrise:{" "}
-            {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}
-          </p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Sunrise</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-      <Card sx={{ minWidth: 275 }} className="py-4">
-        <CardContent className="rounded-full card-bg text-slate-50">
-          <p>
-            Sunset:{" "}
-            {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}
-          </p>
-        </CardContent>
-      </Card>
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
+          <CardContent className="rounded-lg card-bg shadow-xl">
+            <div className="flex items-center justify-between pl-2 pr-2">
+              <p>Sunset</p>
+              <p className="order-last">
+                <ArrowForwardIosRoundedIcon className="cyber-yellow" />{" "}
+                {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
