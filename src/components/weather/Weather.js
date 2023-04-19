@@ -70,8 +70,8 @@ const Weather = ({ city, unit }) => {
       </div>
 
       <div className="main-weather-cards">
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Feels like</p>
               <p className="order-last">
@@ -82,8 +82,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Max Temperature</p>
               <p className="order-last">
@@ -94,8 +94,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Min Temperature</p>
               <p className="order-last">
@@ -106,8 +106,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Pressure</p>
               <p className="order-last">
@@ -118,8 +118,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Humidity</p>
               <p className="order-last">
@@ -130,8 +130,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Wind degrees</p>
               <p className="order-last">
@@ -142,8 +142,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Wind speed</p>
               <p className="order-last">
@@ -155,8 +155,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg text-slate-50 shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg text-slate-50 shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Sunrise</p>
               <p className="order-last">
@@ -167,8 +167,8 @@ const Weather = ({ city, unit }) => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2">
-          <CardContent className="rounded-lg card-bg shadow-xl">
+        <Card sx={{ minWidth: 275 }} className="py-2 pr-2 pl-2 card-bg">
+          <CardContent className="rounded-lg card-content-bg shadow-xl">
             <div className="flex items-center justify-between pl-2 pr-2">
               <p>Sunset</p>
               <p className="order-last">

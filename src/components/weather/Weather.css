@@ -12,11 +12,11 @@
 }
 
 .app-bg-color {
-    background-color: transparent;
+    background-color: transparent!important;
 }
 
-.card-bg {
-    background-color: #2b3d4ed0;
+.card-content-bg {
+    background-color: #2b3d4ed0!important;
     color: #44b9c0;
     backdrop-filter: blur(5px);
     border-width: 1px;
@@ -44,6 +44,11 @@
     backdrop-filter: blur(5px);
 }
 
-
+.card-bg {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    overflow: unset!important;
+    border-radius: none !important;
+}
   
   
