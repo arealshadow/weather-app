@@ -31,9 +31,6 @@ function App() {
         <div className="hamburger-menu">
           <button onClick={handleMenuClick}>☰</button>
         </div>
-        <div className="app-title">
-          <h1 className="text-3xl font-bold rounded-full">My Weather App</h1>
-        </div>
       </header>
       <SideMenu
         isOpen={showMenu}

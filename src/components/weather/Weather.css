@@ -1,3 +1,22 @@
 .weather-data {
     text-align: center;
 }
+
+.css-pwngrv-MuiPaper-root-MuiCard-root {
+    background-color: #1a1d30 !important;
+    /* color: rgba(0, 0, 0, 0.87); */
+}
+
+.app-bg-color {
+    background-color: #1a1d30;
+}
+
+.card-bg {
+    background-color: #202536;
+    color: #44b9c0;
+}
+
+.main-weather-data {
+    color: #d1b76c;
+}
+

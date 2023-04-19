@@ -70,17 +70,11 @@ const SideMenu = ({ isOpen, onClose, onSelectCity, onUnitChange }) => {
   return (
     <div className={`side-menu ${isOpen ? "open" : ""}`}>
       <nav>
-        <div>
-          <Button
-            variant="contained"
-            onClick={() => handleUnitChange("metric")}
-          >
+        <div className="py-2">
+          <Button variant="text" onClick={() => handleUnitChange("metric")}>
             Celsius
           </Button>
-          <Button
-            variant="contained"
-            onClick={() => handleUnitChange("imperial")}
-          >
+          <Button variant="text" onClick={() => handleUnitChange("imperial")}>
             Fahrenheit
           </Button>
         </div>
@@ -102,11 +96,15 @@ const SideMenu = ({ isOpen, onClose, onSelectCity, onUnitChange }) => {
             </ol>
           ))}
         </div>
-        <div className="saved-cities">
-          <h3>Saved Cities</h3>
+        <div className="saved-cities side-menu-txt text-center">
+          <h1>Saved Cities</h1>
           {savedCities.map((city) => (
-            <ol>
-              <Button key={city.id} onClick={() => handleSelectCity(city)}>
+            <ol className="side-menu-txt">
+              <Button
+                key={city.id}
+                onClick={() => handleSelectCity(city)}
+                className="side-menu-txt"
+              >
                 {city.name}, {city.sys.country}
               </Button>
               <Button onClick={() => handleRemoveCity(city)}>Remove</Button>
